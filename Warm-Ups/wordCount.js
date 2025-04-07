@@ -1,0 +1,1 @@
+// Task 1: Write a function that counts how many times a certain word appears in a sentence (case-insensitive).
