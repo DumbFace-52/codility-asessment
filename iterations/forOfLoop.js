@@ -113,6 +113,33 @@ Expected Output: null
 
 */ 
 
+function findFirstNonRepeatingCharacter(str) {
+    // Step 1: Create an object to store the frequency count of each character
+    let charCount = {};
+
+    // Step 2: Loop through the string and count the occurrences of each character
+    for (let char of str) {
+        // If the character exists in the object, increment its count, else set it to 1
+        charCount[char] = (charCount[char] || 0) + 1;
+    }
+
+    // Step 3: Loop through the string again to find the first character with a count of 1
+    for (let char of str) {
+        // If the count is 1, return that character as the first non-repeating character
+        if (charCount[char] === 1) {
+            return char;
+        }
+    }
+
+    // Step 4: If no non-repeating character was found, return null
+    return null;
+}
+
+// Test cases
+console.log(findFirstNonRepeatingCharacter("swiss")); 
+console.log(findFirstNonRepeatingCharacter("aabbcc")); 
+
+
 
 
 // Declare the that groups words based on their first letter;
