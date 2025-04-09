@@ -62,7 +62,6 @@ function countUniqueWords(paragraph) {
     return uniqueWords.size;
 }
 
-
 // Test the function
 console.log(countUniqueWords("I love coding and I love learning"));
 
